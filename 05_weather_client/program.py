@@ -72,5 +72,7 @@ def cleanup_text(text: str):
     return text
 
 
+    # only a minor change
+
 if __name__ == '__main__':
     main()
