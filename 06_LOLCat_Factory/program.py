@@ -43,9 +43,17 @@ def download_cats(folder):
 
 def display_cats(folder):
     print("Displaying cats in OS Window.")
-    if platform.system() == "Windows":
-        subprocess.call(["start", folder])
-    subprocess.call(['open', folder])
+    print("Current system is: " + platform.system())
+    if platform.system() == "Darwin":
+        subprocess.call(["open", folder])
+    elif platform.system() == "Windows":
+        subprocess.call(["explorer", folder])
+    elif platform.system() == "Linux":
+        subprocess.call(["xdg-open", folder])
+    else:
+        print("We don't support your os " + platform.system())
+
+
 
 
 if __name__ == '__main__':
