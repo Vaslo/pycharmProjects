@@ -14,14 +14,14 @@ def print_header():
 
 def game_loop():
     creatures = [
-        Creature(),
-        Creature(),
-        Creature(),
-        Creature(),
-        Creature()
+        Creature("Toad", 1),
+        Creature("Tiger", 12),
+        Creature("Bat", 3),
+        Creature("Dragon", 56),
+        Creature("Evil Wizard", 1000)
     ]
 
-    hero = Wizard()
+    hero = Wizard("Gandalf", 75)
 
     while True:
         cmd = input("Do you [a]ttack, [r]unaway, [l]ook around?")
